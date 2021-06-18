@@ -1,0 +1,18 @@
+.flex{
+  display: flex;
+}
+.d-block{
+  display: block;
+}
+
+.flex_column{
+  @extend .flex;
+  flex-direction: column;
+}
+.flex-row{
+  @extend .flex;
+  flex-direction: row;
+}
+*{
+
+}

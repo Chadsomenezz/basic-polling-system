@@ -1,0 +1,42 @@
+.poll__container{
+  margin-top: 2rem;
+  color: $tertiary-color;
+  width: 100%;
+  box-shadow: .1em .1em 1em rgba(0,0,0,.3);
+  padding: 2rem;
+  &__title{
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+  &__letter{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    &__ans{
+      color: $primary-light;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: .5rem 1rem;
+      background-color: $secondary-color;
+      transition: background-color .1s linear;
+      &:hover{
+        background-color: darken($secondary-color,10%);
+      }
+    }
+
+    &__description{
+      font-size: 2.4rem;
+      margin-top: .5rem;
+    }
+    &__vote{
+      font-size: 2.4rem;
+      margin-top: .5rem;
+      font-weight: 900;
+      color: $primary-color-lighten;
+    }
+  }
+
+
+}

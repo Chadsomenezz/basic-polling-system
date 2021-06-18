@@ -1,0 +1,64 @@
+.main{
+
+  width: 63%;
+  height: 97%;
+  background-color: $primary-light;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  &__header{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 2rem;
+    box-shadow: .1em .1em .5em rgba(139,148,183,.4);
+
+    h1{
+      font-weight: 400;
+      color: $tertiary-color;
+      letter-spacing: 0.01em;
+      i{
+        color: $primary-color;
+      }
+    }
+  }
+  &__tabs{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $tertiary-color;
+    padding: 2rem;
+    box-shadow: 0 .1em rgb(236, 236, 236);
+
+    ul{
+      display: flex;
+      gap: 5rem;
+      align-content: center;
+
+      li{
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          border: 2px solid #24d2ab;
+          bottom: -2rem;
+          left: 0;
+          width: 0;
+          opacity: 0;
+          transition: width .2s linear;
+        }
+        &:hover{
+          color: $secondary-color;
+        }
+        &:hover::after{
+          width: 100%;
+          opacity: 1;
+        }
+      }
+
+    }
+
+  }
+
+}
+

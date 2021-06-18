@@ -1,0 +1,156 @@
+<%- include("layouts/header.inc.ejs"); %>
+
+
+<div class="container">
+
+<!--Sidebar-->
+    <aside class="sidebar">
+        <section class="sidebar__menu">
+            <div class="sidebar__container">
+                <img class="sidebar__container__user_photo d-block" src="/img/admin_asset/admin_icon.png">
+                <img class="sidebar__container__user_icon d-block" src="/img/admin_asset/admin_add.png">
+            </div>
+            <div class="sidebar__container">
+                <i class="fas fa-poll d-block sidebar__container__icon"></i>
+                <i class="fas fa-comments sidebar__container__icon"></i>
+                <i class="fas fa-calendar-alt sidebar__container__icon"></i>
+            </div>
+
+        </section>
+
+
+    </aside>
+<!--end of sidebar-->
+
+
+    <section class="sidebar__right scrollbar force-overflow" id="style-1">
+        <form class="sidebar__right_form">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bars"></i>
+            <input type="text" placeholder="Search poll" class="d-block">
+        </form>
+        <h2>Subject</h2>
+        <div class="subject_container">
+            <img class="d-block subject_container__img" src="/img/subject/html5.png">
+            <div>
+                <h2>Subject Title</h2>
+                <p class="subject_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cumque eveniet iste libero nostrum</p>
+            </div>
+        </div>
+        <div class="subject_container">
+            <img class="d-block subject_container__img" src="/img/subject/css3.png">
+            <div>
+                <h2>Subject Title</h2>
+                <p class="subject_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cumque eveniet iste libero nostrum</p>
+            </div>
+        </div>
+        <div class="subject_container">
+            <img class="d-block subject_container__img" src="/img/subject/js.png">
+            <div>
+                <h2>Subject Title</h2>
+                <p class="subject_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cumque eveniet iste libero nostrum</p>
+            </div>
+        </div>
+
+
+        <div class="subject_container">
+            <img class="d-block subject_container__img" src="/img/subject/css3.png">
+            <div>
+                <h2>Subject Title</h2>
+                <p class="subject_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cumque eveniet iste libero nostrum</p>
+            </div>
+        </div>
+        <div class="subject_container">
+            <img class="d-block subject_container__img" src="/img/subject/js.png">
+            <div>
+                <h2>Subject Title</h2>
+                <p class="subject_container__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda cumque eveniet iste libero nostrum</p>
+            </div>
+        </div>
+
+    </section>
+
+
+<!--main content-->
+    <main class="main">
+        <div class="main__header">
+            <h1><i class="fas fa-poll"></i>
+                Anonymous Polling System</h1>
+        </div>
+        <div class="main__tabs">
+            <ul>
+                <li><a href="#" id="poll">Poll</a></li>
+                <li><a href="#" id="quiz">Quiz</a></li>
+                <li><a href="#">tab3</a></li>
+                <li><a href="#">tab4</a></li>
+                <li><a href="#">tab5</a></li>
+                <li><a href="#">tab6</a></li>
+                <li><a href="#">tab7</a></li>
+            </ul>
+        </div>
+        <div class="container-create">
+            <a class="btn-create" id="btn-create">Create Poll</a>
+        </div>
+
+    <!--Polling List-->
+        <section class="poll">
+
+
+            <!--individual poll-->
+            <div class="poll__container">
+                <h1 class="poll__container__title">Poll Title</h1>
+                <!--poll choice letter-->
+                <div class="poll__container__letter">
+                    <p class="poll__container__letter__a poll__container__letter__ans" id="a">A</p>
+                    <p class="poll__container__letter__description poll__container__letter__description__a"></p>
+                    <p class="poll__container__letter__vote "> Count: <span class="poll__container__letter__vote__a"></span></p>
+                </div>
+                <div class="poll__container__letter">
+                    <p class="poll__container__letter__b poll__container__letter__ans" id="b">B</p>
+                    <p class="poll__container__letter__description poll__container__letter__description__b"></p>
+                    <p class="poll__container__letter__vote "> Count: <span class="poll__container__letter__vote__b"></span></p>
+                </div>
+                <div class="poll__container__letter">
+                    <p class="poll__container__letter__c poll__container__letter__ans" id="c">C</p>
+                    <p class="poll__container__letter__description poll__container__letter__description__c"></p>
+                    <p class="poll__container__letter__vote "> Count: <span class="poll__container__letter__vote__c"></span></p>
+                </div>
+                <div class="poll__container__letter">
+                    <p class="poll__container__letter__d poll__container__letter__ans" id="d">D</p>
+                    <p class="poll__container__letter__description poll__container__letter__description__d"></p>
+                    <p class="poll__container__letter__vote "> Count: <span class="poll__container__letter__vote__d"></span></p>
+                </div>
+                <!--poll single choice letter-->
+            </div>
+            <!--individual poll end-->
+
+
+
+
+        </section>
+    </main>
+<!--end of main content-->
+</div>
+
+
+<!--create modal-->
+<section class="modal" id="modal">
+    <div class="modal__body">
+        <h1 class="modal__title">
+            <i class="fas fa-poll"></i>
+            Create a Poll
+        </h1>
+        <form class="modal__question">
+            <input type="text" placeholder="Poll Title" name="poll_title" required autocomplete="off">
+            <input type="text" placeholder="For Letter A" name="a" required autocomplete="off">
+            <input type="text" placeholder="For Letter B" name="b" required autocomplete="off">
+            <input type="text" placeholder="For Letter C" name="c" required autocomplete="off">
+            <input type="text" placeholder="For Letter D" name="d" required autocomplete="off">
+            <input type="submit" name="submit" id="cta_create_poll" required autocomplete="off">
+        </form>
+    </div>
+</section>
+
+
+
+<%- include("layouts/footer.inc.ejs"); %>

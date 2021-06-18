@@ -1,0 +1,22 @@
+.container-create{
+  width: 100%;
+  text-align: right;
+  position: relative;
+  .btn-create{
+    padding: .7em 2em;
+    border: none;
+    outline: none;
+    background-color: $primary-color-lighten;
+    color: $primary-light;
+    font-size: 1.6rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    text-align: right;
+    margin:2rem;
+    display: inline-block;
+    transition: background-color .2s linear;
+    &:hover{
+      background-color:darken($primary-color-lighten,10%);
+    }
+  }
+}
